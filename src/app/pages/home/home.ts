@@ -9,6 +9,7 @@ import { PageEffects } from '../../shared/page-effects';
   selector: 'app-home',
   styleUrl: './home.scss',
   templateUrl: './home.html',
+  host: { class: 'home-page' }
 })
 export class Home implements AfterViewInit, OnDestroy {
   private readonly effects = new PageEffects();

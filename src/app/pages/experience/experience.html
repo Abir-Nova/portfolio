@@ -6,19 +6,21 @@
       <span class="brand-mark">AN</span>
       <span>ABIR NASSIF</span>
     </a>
-    <ul class="nav-links">
-      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-      <li><a routerLink="/experience" routerLinkActive="active">Experience</a></li>
-      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active" class="nav-cta">Let's talk ↗</a></li>
-    </ul>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a routerLink="/about">About</a>
+      <a routerLink="/experience">Experience</a>
+      <a routerLink="/projects">Projects</a>
+      <a routerLink="/skills">Skills</a>
+      <a routerLink="/contact" class="nav-cta">Let's talk <span>↗</span></a>
+    </div>
   </nav>
 </header>
 
 <main id="main-content">
   <!-- Experience -->
 
-  <section class="stage" aria-labelledby="exp-title">
+  <section class="stage" aria-labelledby="exp-title" style="margin-top: 76px;">
     <!--  Decorative background  -->
     <div class="deco" aria-hidden="true">
       <span class="line-arc-left"></span>

@@ -9,6 +9,7 @@ import { PageEffects } from '../../shared/page-effects';
   selector: 'app-contact',
   styleUrl: './contact.scss',
   templateUrl: './contact.html',
+  host: { class: 'contact-page' }
 })
 export class Contact implements AfterViewInit, OnDestroy {
   private readonly effects = new PageEffects();

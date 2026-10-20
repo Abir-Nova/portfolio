@@ -12,6 +12,7 @@ import { PageEffects } from '../../shared/page-effects';
   selector: 'app-about',
   styleUrl: './about.scss',
   templateUrl: './about.html',
+  host: { class: 'about-page' }
 })
 export class About implements AfterViewInit, OnDestroy {
   private readonly effects = new PageEffects();

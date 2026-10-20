@@ -21,8 +21,9 @@
       <a routerLink="/about" routerLinkActive="active">About</a>
       <a routerLink="/experience" routerLinkActive="active">Experience</a>
       <a routerLink="/projects" routerLinkActive="active">Projects</a>
-      <a routerLink="/skills" routerLinkActive="active">Skills</a>
-      <a routerLink="/contact" routerLinkActive="active" class="nav-cta" >Let's talk <span>↗</span></a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-cta"
+        >Let's talk <span>↗</span></a
+      >
     </div>
   </nav>
 </header>
@@ -260,11 +261,49 @@
     </div>
   </section>
 
-  <section class="section soft-surface" aria-labelledby="cta-title">
-    <div class="container">
-      <p class="eyebrow">Have an idea, project or opportunity?</p>
-      <h2 id="cta-title">Let's build something meaningful.</h2>
-      <a class="button button-primary" routerLink="/contact">Get in touch</a>
+  <!-- CONTACT CTA -->
+  <section class="closing-section" #closingSection>
+    <div class="closing-inner">
+      <div class="closing-copy">
+        <p class="eyebrow reveal-item">HAVE AN IDEA, PROJECT OR OPPORTUNITY?</p>
+
+        <h2 class="closing-title reveal-item">
+          Let's make
+          <br />
+          something
+          <span class="title-accent">meaningful.</span>
+        </h2>
+
+        <p class="closing-description reveal-item">Good ideas begin with a conversation.</p>
+
+        <a
+          class="closing-cta reveal-item"
+          routerLink="/contact"
+          aria-label="Let's talk — go to contact page"
+        >
+          <span>LET'S TALK</span>
+          <span class="cta-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <!-- Decorative animated orbital graphic -->
+      <div class="orbit-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+
+        <span class="orbit-dot dot-one"></span>
+        <span class="orbit-dot dot-two"></span>
+        <span class="orbit-dot dot-three"></span>
+
+        <span class="orbit-star star-one">✦</span>
+        <span class="orbit-star star-two">✧</span>
+        <span class="orbit-star star-three">✦</span>
+
+        <a class="orbit-center" routerLink="/contact" tabindex="-1">
+          <span>↗</span>
+        </a>
+      </div>
     </div>
   </section>
 </main>

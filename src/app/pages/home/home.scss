@@ -1900,3 +1900,435 @@
         transform: none;
     }
 }
+
+
+
+/*CTA*/ 
+
+
+
+/* =========================================
+   HOME PAGE — ANIMATED CLOSING CTA
+   Used by .closing-section in home.html
+   ========================================= */
+
+.closing-section {
+  --closing-cream: #f5eee8;
+  --closing-ink: #3d2925;
+  --closing-green: #0d5c3c;
+  --closing-gold: #c19344;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(5rem, 10vw, 9rem) 7%;
+  background:
+    radial-gradient(
+      ellipse at 80% 35%,
+      rgba(193, 147, 68, 0.10),
+      transparent 28rem
+    ),
+    var(--closing-cream);
+  color: var(--closing-ink);
+}
+
+.closing-inner {
+  width: min(100%, 1320px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(230px, 0.7fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 7rem);
+}
+
+.closing-copy {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.closing-copy .eyebrow {
+  display: block;
+  margin: 0 0 2rem;
+  color: var(--closing-green);
+  font-size: 0.68rem;
+  line-height: 1.8;
+  letter-spacing: 0.13em;
+}
+
+.closing-title {
+  max-width: 900px;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.1rem, 6.4vw, 6.4rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.065em;
+  text-wrap: balance;
+}
+
+.closing-title .title-accent {
+  color: var(--closing-green);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.closing-description {
+  margin: 1.8rem 0 2rem;
+  color: #65554f;
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  line-height: 1.8;
+}
+
+/* Contact button */
+
+.closing-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  min-height: 60px;
+  padding: 0.9rem 1.8rem;
+  overflow: hidden;
+  border: 1px solid var(--closing-green);
+  border-radius: 100px;
+  background: var(--closing-green);
+  color: var(--closing-cream);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.closing-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--closing-cream);
+  transform: translateY(102%);
+  transition: transform 0.35s ease;
+}
+
+.closing-cta > span {
+  position: relative;
+  z-index: 1;
+}
+
+.closing-cta .cta-arrow {
+  font-size: 1.35rem;
+  transition: transform 0.35s ease;
+}
+
+.closing-cta:hover {
+  color: var(--closing-green);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(13, 92, 60, 0.15);
+}
+
+.closing-cta:hover::before {
+  transform: translateY(0);
+}
+
+.closing-cta:hover .cta-arrow {
+  transform: translate(4px, -4px);
+}
+
+.closing-cta:focus-visible,
+.orbit-center:focus-visible {
+  outline: 3px solid var(--closing-gold);
+  outline-offset: 5px;
+}
+
+/* Orbital illustration */
+
+.orbit-art {
+  position: relative;
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+
+.orbit {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border: 1px solid var(--closing-green);
+  border-radius: 50%;
+}
+
+.orbit-one {
+  animation: closing-orbit-breathe 6s ease-in-out infinite;
+}
+
+.orbit-two {
+  width: 86%;
+  height: 86%;
+  border-color: rgba(13, 92, 60, 0.4);
+  border-style: dashed;
+  animation: closing-orbit-spin 35s linear infinite;
+}
+
+.orbit-three {
+  width: 108%;
+  height: 52%;
+  border-color: var(--closing-gold);
+  transform: rotate(-42deg);
+  animation: closing-orbit-tilt 8s ease-in-out infinite alternate;
+}
+
+.orbit-center {
+  position: relative;
+  z-index: 2;
+  width: 94px;
+  height: 94px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--closing-green);
+  color: var(--closing-cream);
+  text-decoration: none;
+  animation: closing-center-pulse 3s ease-in-out infinite;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.orbit-center span {
+  font-family: Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.orbit-center:hover {
+  background: var(--closing-ink);
+  transform: scale(1.08);
+}
+
+.orbit-center:hover span {
+  transform: translate(4px, -4px);
+}
+
+.orbit-dot {
+  position: absolute;
+  z-index: 3;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--closing-gold);
+  box-shadow: 0 0 0 5px rgba(193, 147, 68, 0.09);
+}
+
+.dot-one {
+  top: 10%;
+  right: 24%;
+}
+
+.dot-two {
+  bottom: 18%;
+  left: 23%;
+  width: 16px;
+  height: 16px;
+}
+
+.dot-three {
+  top: 36%;
+  left: 8%;
+  width: 9px;
+  height: 9px;
+}
+
+.orbit-star {
+  position: absolute;
+  z-index: 1;
+  color: var(--closing-green);
+  animation: closing-star-float 4s ease-in-out infinite alternate;
+}
+
+.star-one {
+  top: 12%;
+  left: 10%;
+  font-size: 2rem;
+}
+
+.star-two {
+  top: 45%;
+  right: 0;
+  color: var(--closing-gold);
+  font-size: 2.4rem;
+  animation-delay: -1s;
+}
+
+.star-three {
+  right: 19%;
+  bottom: 10%;
+  font-size: 1.6rem;
+  animation-delay: -2s;
+}
+
+/* Scroll-triggered entrance */
+
+.closing-section .reveal-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.closing-section .reveal-item:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.closing-section .reveal-item:nth-child(3) {
+  transition-delay: 0.22s;
+}
+
+.closing-section .reveal-item:nth-child(4) {
+  transition-delay: 0.32s;
+}
+
+.closing-section .orbit-art {
+  opacity: 0;
+  transform: scale(0.9);
+  transition:
+    opacity 0.9s ease 0.18s,
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.18s;
+}
+
+.closing-section.is-closing-visible .reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.closing-section.is-closing-visible .orbit-art {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animation keyframes */
+
+@keyframes closing-orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes closing-orbit-breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes closing-orbit-tilt {
+  from {
+    transform: rotate(-42deg) scale(1);
+  }
+  to {
+    transform: rotate(-32deg) scale(1.04);
+  }
+}
+
+@keyframes closing-center-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(13, 92, 60, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(13, 92, 60, 0);
+  }
+}
+
+@keyframes closing-star-float {
+  from {
+    transform: translateY(0) rotate(0);
+  }
+  to {
+    transform: translateY(-10px) rotate(12deg);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .closing-section {
+    padding-inline: 6%;
+  }
+
+  .closing-inner {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 2rem;
+  }
+
+  .closing-title {
+    font-size: clamp(2.8rem, 6.5vw, 4.5rem);
+  }
+
+  .orbit-center {
+    width: 76px;
+    height: 76px;
+  }
+}
+
+@media (max-width: 600px) {
+  .closing-section {
+    padding: 5rem 7%;
+  }
+
+  .closing-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .closing-copy .eyebrow {
+    margin-bottom: 1.4rem;
+    font-size: 0.6rem;
+  }
+
+  .closing-title {
+    font-size: clamp(2.7rem, 10.5vw, 4rem);
+    line-height: 1.04;
+    letter-spacing: -0.055em;
+  }
+
+  .closing-description {
+    margin: 1.4rem 0 1.7rem;
+    font-size: 0.95rem;
+  }
+
+  .closing-cta {
+    min-height: 56px;
+    padding-inline: 1.5rem;
+  }
+
+  .orbit-art {
+    width: min(72vw, 270px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .closing-section *,
+  .closing-section *::before,
+  .closing-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .closing-section .reveal-item,
+  .closing-section .orbit-art {
+    opacity: 1;
+    transform: none;
+  }
+}

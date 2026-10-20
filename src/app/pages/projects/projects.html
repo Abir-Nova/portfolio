@@ -1,79 +1,260 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">ABIR NASSIF</a>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/projects">Projects</a></li>
-        <li><a routerLink="/experience">Experience</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-      </ul>
-      <a href="contact.html">Let's talk</a>
-    </nav>
-  </header>
+<header class="site-header" id="top">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" routerLink="/" aria-label="Abir Nassif home">
+      <span class="brand-mark">AN</span>
+      <span>ABIR NASSIF</span>
+    </a>
+    <ul class="nav-links">
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/experience" routerLinkActive="active">Experience</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" class="nav-cta">Let's talk ↗</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <section aria-labelledby="projects-title">
-      <p>02 · Selected work</p>
-      <h1 id="projects-title">Things I've built, explored and shipped.</h1>
-      <p>A collection of academic projects, products, experiments and technical challenges.</p>
-    </section>
+<main id="main-content">
+  <!--projects -->
 
-    <nav aria-label="Project categories">
-      <a href="#all">All</a>
-      <a href="#web">Web</a>
-      <a href="#ai">AI</a>
-      <a href="#embedded">Embedded</a>
-      <a href="#product">Product</a>
-    </nav>
+  <section class="section projects" id="projects">
+    <div class="container">
+      <!-- Section heading: keep your existing content -->
+      <div class="section-heading project-heading reveal">
+        <div class="project-heading-main">
+          <div class="section-label">
+            <span>03</span>
+            <p>Selected work</p>
+          </div>
+          <h2>Things I've <em>built.</em></h2>
+        </div>
 
-    <section id="all" aria-label="Project list">
-      <article id="marocsphere">
-        <p>Web · AI · Product</p>
-        <h2>MarocSphere</h2>
-        <p>An AI-powered tourism platform designed to help people discover Morocco through personalized itineraries, interactive maps, verified guides, experiences and cultural content.</p>
-        <p><strong>Stack:</strong> Angular, TypeScript, HTML, SCSS, APIs, AI, Git/GitHub</p>
-        <a href="#marocsphere">Case study →</a>
-      </article>
+        <p class="project-heading-description">
+          Code is only one part of the work. Each project is an exercise in problem solving,
+          interface design and delivery.
+        </p>
+      </div>
 
-      <article id="smart-reader">
-        <p>AI · Embedded · Accessibility</p>
-        <h2>Smart Reader</h2>
-        <p>A Raspberry Pi 4 project combining camera capture, OCR and text-to-speech to create an assistive reading device.</p>
-        <p><strong>Stack:</strong> Python, Raspberry Pi, OpenCV/Pillow, Tesseract OCR, eSpeak</p>
-        <a href="#smart-reader">Case study →</a>
-      </article>
+      <!-- Projects gallery -->
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <article class="project-card project-card-large reveal">
+          <div class="project-number">01</div>
 
-      <article id="driving-permit">
-        <p>Web · UX · Education</p>
-        <h2>Driving Permit</h2>
-        <p>A trilingual English/Arabic/French concept for organizing driving-license preparation resources and learning flows.</p>
-        <p><strong>Focus:</strong> UX structure, educational content, accessibility and localization</p>
-        <a href="#driving-permit">Case study →</a>
-      </article>
+          <div class="project-visual maroc">
+            <img
+              src="assets/marocsphere.png"
+              alt="MarocSphere tourism platform showcasing Morocco"
+              class="project-image"
+            />
 
-      <article id="hangman">
-        <p>Python · Game Development</p>
-        <h2>Hangman</h2>
-        <p>A progressive Python project evolving from a command-line game into a graphical Pygame experience.</p>
-        <p><strong>Stack:</strong> Python, argparse, Pygame, external word lists</p>
-        <a href="#hangman">View project →</a>
-      </article>
+            <div class="project-overlay">
+              <a href="#projects" class="overlay-content" aria-label="MarocSphere project details">
+                <h3>MarocSphere</h3>
+                <p>Web Platform</p>
+              </a>
+            </div>
+          </div>
 
-      <article id="portfolio">
-        <p>Web · Personal</p>
-        <h2>This Portfolio</h2>
-        <p>A living portfolio built as a serious long-term project: responsive, dynamic, animated and continuously improved.</p>
-        <p><strong>Stack:</strong> Angular / TypeScript, HTML, SCSS, GitHub</p>
-        <a href="#portfolio">View project →</a>
-      </article>
-    </section>
-  </main>
+          <div class="project-info">
+            <div class="project-meta">
+              <span>WEB PLATFORM</span>
+              <span>2026</span>
+            </div>
+            <h3>MarocSphere</h3>
+            <p>
+              A digital tourism experience built around Moroccan culture, discovery and personalized
+              travel.
+            </p>
+            <div class="chips">
+              <span>Angular</span>
+              <span>TypeScript</span>
+              <span>UX</span>
+            </div>
+          </div>
+        </article>
 
-  <footer>
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-number">02</div>
+
+          <div class="project-visual hangman">
+            <span class="game-score">SCORE: 120</span>
+            <span class="hang-word">_ A _ G _ A _</span>
+            <span class="hang-art">◯<br />│<br />╱ ╲</span>
+            <span class="game-label">PYGAME</span>
+
+            <div class="project-overlay">
+              <a
+                href="#projects"
+                class="overlay-content"
+                aria-label="Graphical Hangman project details"
+              >
+                <h3>Graphical Hangman</h3>
+                <p>Python Game</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span>PYTHON GAME</span>
+              <span>2026</span>
+            </div>
+            <h3>Graphical Hangman</h3>
+            <p>
+              Interactive Hangman game developed with Python/Pygame, including game logic and
+              graphical interaction.
+            </p>
+            <div class="chips">
+              <span>Python</span>
+              <span>Pygame</span>
+              <span>Logic</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal">
+          <div class="project-number">03</div>
+
+          <div class="project-visual reader">
+            <span class="reader-icon">◉</span>
+            <span class="reader-copy">READ<br />LISTEN<br />ACCESS</span>
+            <span class="reader-tech">RASPBERRY PI · AI</span>
+
+            <div class="project-overlay">
+              <a href="#projects" class="overlay-content" aria-label="Smart Reader project details">
+                <h3>Smart Reader</h3>
+                <p>Accessibility / AI</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span>ACCESSIBILITY / AI</span>
+              <span>2026</span>
+            </div>
+            <h3>Smart Reader</h3>
+            <p>
+              AI-assisted Raspberry Pi system designed to read printed and digital content aloud for
+              improved accessibility.
+            </p>
+            <div class="chips">
+              <span>Raspberry Pi</span>
+              <span>OCR</span>
+              <span>TTS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal">
+          <div class="project-number">04</div>
+
+          <div class="project-visual portfolio">
+            <span class="portfolio-grid">A<br />N</span>
+            <span class="portfolio-copy">My<br />PORTFOLIO</span>
+            <span class="portfolio-tech">HTML · CSS · JS</span>
+
+            <div class="project-overlay">
+              <a
+                href="#projects"
+                class="overlay-content"
+                aria-label="Personal Portfolio project details"
+              >
+                <h3>Personal Portfolio</h3>
+                <p>Web Development</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span>PERSONAL WEBSITE</span>
+              <span>2026</span>
+            </div>
+            <h3>Personal Portfolio</h3>
+            <p>
+              A responsive personal site designed as an interactive digital portfolio for recruiters
+              and collaborators.
+            </p>
+            <div class="chips">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card project-card-large reveal">
+          <div class="project-number">05</div>
+
+          <div class="project-visual rihanna">
+            <img src="assets/RIHANNA.png" alt="Rihanna restaurant website" class="project-image" />
+
+            <div class="project-overlay">
+              <a
+                href="#projects"
+                class="overlay-content"
+                aria-label="RIHANNA restaurant website details"
+              >
+                <h3>RIHANNA</h3>
+                <p>Responsive Website</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span>RESPONSIVE WEBSITE</span>
+              <span>2026</span>
+            </div>
+            <h3>RIHANNA</h3>
+            <p>
+              Modern restaurant showcase with responsive layouts, interactive features and a focus
+              on user experience.
+            </p>
+            <div class="chips">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="experience-cta-title">
+    <div class="container">
+      <h2 id="experience-cta-title">Let's create the next chapter.</h2>
+      <a class="button button-primary" routerLink="/contact">Contact me →</a>
+    </div>
+  </section>
+
+  <!--projetcs end  -->
+</main>
+
+<footer class="footer">
+  <div class="container footer-main">
+    <div>
+      <p class="eyebrow">Thank you for stopping by ✦</p>
+      <h2 class="footer-title">Curious by nature. <em>Building what's next.</em></h2>
+    </div>
+    <span>Marrakech · Paris</span>
+  </div>
+  <div class="container footer-bottom">
     <p>© 2026 Abir Nassif</p>
-    <a href="contact.html">Let's work together</a>
-  </footer>
-
-
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a routerLink="/">Home</a>
+      <a routerLink="/about">About</a>
+      <a routerLink="/experience">Experience</a>
+      <a routerLink="/contact">Contact</a>
+    </nav>
+  </div>
+</footer>

@@ -1,61 +1,154 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">ABIR NASSIF</a>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/projects">Projects</a></li>
-        <li><a routerLink="/experience">Experience</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="site-header" id="top">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" routerLink="/" aria-label="Abir Nassif home">
+      <span class="brand-mark">AN</span>
+      <span>ABIR NASSIF</span>
+    </a>
+    <ul class="nav-links">
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/experience" routerLinkActive="active">Experience</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" class="nav-cta">Let's talk ↗</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <section aria-labelledby="contact-title">
-      <p>04 · Contact</p>
-      <h1 id="contact-title">Have a project, opportunity or idea?</h1>
-      <p>I'm always interested in meaningful projects, collaborations, internships, technology communities and conversations around building products.</p>
-    </section>
+<main id="main-content">
+  <!-- CONTACT SECTION -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <!-- LEFT: INTRODUCTION AND CONTACT LINKS -->
+      <div class="contact-copy">
+        <div class="section-label">
+          <span>07</span>
+          <p>Contact</p>
+        </div>
 
-    <section aria-labelledby="contact-methods-title">
-      <h2 id="contact-methods-title">Find me</h2>
-      <ul>
-        <li><a href="mailto:aabir.nassif@gmail.com">Email</a></li>
-        <li><a href="www.linkedin.com/in/abirnassif" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="https://github.com/Abir-Nova" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <!--noopener noreferrer : security : Open this link without giving the new page access to the page that opened it, and don't tell the new page where the user came from -->
-      </ul>
-    </section>
+        <h2>
+          Let's make something
+          <em>meaningful.</em>
+        </h2>
 
-    <section aria-labelledby="message-title">
-      <h2 id="message-title">Send a message</h2>
-      <form action="#" method="post">
-        <div>
-          <label for="name">Full name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required>
+        <p>
+          Have a project, opportunity or idea? I'm open to conversations with recruiters,
+          collaborators, student communities and people building meaningful things.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:aabir.nassif@gmail.com">
+            <span>Email</span>
+            <strong>aabir.nassif@gmail.com</strong>
+            <span class="contact-link-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="tel:+212690137848">
+            <span>Phone</span>
+            <strong>+212 690-137848</strong>
+            <span class="contact-link-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/abirnassif"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>LinkedIn</span>
+            <strong>abirnassif</strong>
+            <span class="contact-link-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="https://github.com/Abir-Nova" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span>
+            <strong>Abir-Nova</strong>
+            <span class="contact-link-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="assets/Abir_Nassif_CV_2026.pdf" target="_blank" rel="noopener">
+            <span>Résumé</span>
+            <strong>Download my CV ↗</strong>
+          </a>
         </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+
+      <!-- RIGHT: MESSAGE FORM -->
+      <form
+        class="contact-form"
+        id="contact-form"
+        action="mailto:aabir.nassif@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div class="form-heading">
+          <span>Send me a message / 01</span>
+          <span>LET'S CONNECT ↗</span>
         </div>
-        <div>
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required>
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="7" required></textarea>
-        </div>
-        <button type="submit">Send message</button>
+
+        <label for="name">
+          Your name
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+            placeholder="Nour feiz"
+          />
+        </label>
+
+        <label for="email">
+          Your email
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            placeholder="nour@example.com"
+          />
+        </label>
+
+        <label for="message">
+          Your message
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            placeholder="Tell me about your idea..."
+          ></textarea>
+        </label>
+
+        <button class="button button-primary submit-button" type="submit">
+          <span class="button-label">Send me a message</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+
+        <p class="form-note">Your email app will open when you submit.</p>
+
+        <p class="form-status" id="form-status" aria-live="polite"></p>
       </form>
-    </section>
-  </main>
+    </div>
+  </section>
+  <!-- CONTACT SECTION END -->
+</main>
 
-  <footer>
+<footer class="footer">
+  <div class="container footer-main">
+    <div>
+      <p class="eyebrow">Thank you for stopping by ✦</p>
+      <h2 class="footer-title">Curious by nature. <em>Building what's next.</em></h2>
+    </div>
+    <span>Marrakech · Paris</span>
+  </div>
+  <div class="container footer-bottom">
     <p>© 2026 Abir Nassif</p>
-    <a href="index.html">Back home</a>
-  </footer>
-
-
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a routerLink="/">Home</a>
+      <a routerLink="/about">About</a>
+      <a routerLink="/experience">Experience</a>
+      <a routerLink="/projects">Projects</a>
+    </nav>
+  </div>
+</footer>

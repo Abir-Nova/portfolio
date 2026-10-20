@@ -1,73 +1,312 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html" aria-label="Abir Nassif home">ABIR NASSIF</a>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/projects">Projects</a></li>
-        <li><a routerLink="/experience">Experience</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-      </ul>
-      <a href="contact.html">Let's talk</a>
-    </nav>
-  </header>
+<header class="site-header" id="top">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="Abir Nassif home">
+      <span class="brand-mark">AN</span>
+      <span>ABIR NASSIF</span>
+    </a>
 
-  <main>
-    <section id="hero" aria-labelledby="hero-title">
-      <p>Moroccan computer engineering student · Frontend · Product</p>
-      <h1 id="hero-title">I build digital experiences with code, curiosity and culture.</h1>
-      <p>I'm Abir Nassif, a software engineering student and product builder currently studying in Paris.</p>
-      <div>
-        <a href="projects.html">Explore my work</a>
-        <a href="about.html">More about me</a>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="nav-links"
+      aria-label="Open navigation"
+    >
+      <span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="nav-links">
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/experience" routerLinkActive="active">Experience</a>
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/skills" routerLinkActive="active">Skills</a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-cta" >Let's talk <span>↗</span></a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="hero section">
+    <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+    <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">
+          <span class="status-dot"></span> Available for opportunities · Paris / Marrakech
+        </p>
+        <h1>Building digital experiences with <em>purpose.</em></h1>
+        <p class="hero-intro">
+          Future computer engineer, frontend developer and product builder. I combine technology,
+          project coordination and communication to turn ideas into useful experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span>↓</span></a>
+          <a
+            class="button button-ghost"
+            href="assets/Abir_Nassif_CV_2026.pdf"
+            target="_blank"
+            rel="noopener"
+            >View CV <span>↗</span></a
+          >
+        </div>
+
+        <div class="hero-meta">
+          <div>
+            <strong>01</strong>
+            <span>Computer<br />Engineering</span>
+          </div>
+          <div>
+            <strong>02</strong>
+            <span>Frontend &<br />Product</span>
+          </div>
+          <div>
+            <strong>03</strong>
+            <span>Community &<br />Projects</span>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section id="featured-work" aria-labelledby="featured-title">
-      <p>Selected work</p>
-      <h2 id="featured-title">Projects that became real things.</h2>
-      <article>
-        <p>01 · Product / Full-stack</p>
-        <h3>MarocSphere</h3>
-        <p>An AI-powered Moroccan tourism platform combining personalized travel planning, maps, verified experiences, guides and cultural discovery.</p>
-        <a href="projects.html#marocsphere">View project</a>
-      </article>
-      <article>
-        <p>02 · AI / Embedded</p>
-        <h3>Smart Reader</h3>
-        <p>A Raspberry Pi-based assistive reader using OCR and text-to-speech to transform printed text into accessible audio.</p>
-        <a href="projects.html#smart-reader">View project</a>
-      </article>
-      <article>
-        <p>03 · Web / Learning</p>
-        <h3>Driving Permit</h3>
-        <p>A bilingual concept designed to make driving-license preparation more accessible through structured learning resources.</p>
-        <a href="projects.html#driving-permit">View project</a>
-      </article>
-    </section>
+      <div class="hero-card-wrap reveal reveal-delay">
+        <div class="profile-card">
+          <!-- Background profile picture -->
 
-    <section id="identity" aria-labelledby="identity-title">
-      <p>A little context</p>
-      <h2 id="identity-title">Engineer by training. Builder by nature.</h2>
-      <p>I like moving between technical implementation, product thinking and communication. My work sits where technology meets people, storytelling and real-world problems.</p>
-      <a href="about.html">Discover my story →</a>
-    </section>
+          <img src="assets/my_profile_pic.jpg" alt="Portrait of Your Name" class="profile-photo" />
 
-    <section id="cta" aria-labelledby="cta-title">
-      <p>Have an idea, project or opportunity?</p>
+          <!-- Dark overlay to keep the text readable -->
+          <div class="profile-overlay"></div>
+
+          <div class="card-content">
+            <!-- Top information -->
+            <div class="card-topline">
+              <span>PERSONAL DOSSIER</span>
+              <span>2026</span>
+            </div>
+
+            <!-- my professional roles -->
+            <div class="profile-role">community · developper · Product</div>
+
+            <!-- Footer information -->
+            <div class="profile-footer">
+              <span>Marrakech → Paris</span>
+              <span>✦</span>
+              <span>Morocco</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating labels -->
+        <div class="floating-tag tag-tech">Leadership / adaptability</div>
+        <div class="floating-tag tag-culture">MADE IN MOROCCO ✦</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="marquee" aria-label="Areas of expertise">
+    <div class="marquee-track">
+      <span>FRONTEND DEVELOPMENT</span><i>✦</i> <span>COMPUTER ENGINEERING</span><i>✦</i>
+      <span>PRODUCT THINKING</span><i>✦</i> <span>PROJECT MANAGEMENT</span><i>✦</i>
+      <span>FRONTEND DEVELOPMENT</span><i>✦</i> <span>COMPUTER ENGINEERING</span><i>✦</i>
+      <span>PRODUCT THINKING</span><i>✦</i> <span>PROJECT MANAGEMENT</span><i>✦</i>
+    </div>
+  </section>
+
+  <!--about me-->
+
+  <section class="section about" id="about">
+    <div class="about-editorial">
+      <!-- Section number and label -->
+      <div class="about-side-label reveal">
+        <span>01</span>
+        <span class="label-divider"></span>
+        <p>About me</p>
+      </div>
+
+      <!-- Portrait composition -->
+      <div class="about-visual reveal">
+        <div class="portrait-orbit"></div>
+        <div class="portrait-disc"></div>
+        <span class="portrait-sparkle sparkle-one">✦</span>
+
+        <figure class="about-portrait">
+          <img
+            src="assets/Abir_AIESEC.jpeg"
+            alt="Portrait of Abir Nassif in Morocco - AIESEC "
+            class="about-photo"
+          />
+        </figure>
+
+        <span class="portrait-tag tag-tech"> <span class="tag-dot"></span> Tech </span>
+
+        <span class="portrait-tag tag-culture"> <span class="tag-dot"></span> Culture </span>
+
+        <!-- Morocco-inspired decorative ornament -->
+        <div class="origin-mark" aria-hidden="true">
+          <span class="moroccan-star">✳</span>
+          <span class="origin-line"></span>
+          <p>Morocco <span>→</span> France</p>
+        </div>
+      </div>
+
+      <!-- Main biography -->
+      <div class="about-content reveal reveal-delay">
+        <p class="section-kicker">Tech <span>×</span> Impact <span>×</span> People</p>
+
+        <h2 class="about-title">
+          I don't just build<br class="desktop-break" />
+          interfaces. I build<br class="desktop-break" />
+          <span class="connection-word">connections.</span>
+        </h2>
+
+        <!-- Decorative handwritten annotation -->
+        <aside class="impact-note" aria-label="Personal motto">
+          <p>
+            Different<br />
+            backgrounds,<br />
+            same goal:<br />
+            make an impact.
+          </p>
+          <svg viewBox="0 0 90 80" aria-hidden="true">
+            <path
+              d="M76 5 C60 24 46 43 25 66"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M25 66 L27 49 M25 66 L43 60"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span>✦</span>
+        </aside>
+
+        <!-- Biography columns -->
+        <div class="about-columns">
+          <p>
+            I'm a Moroccan computer engineering student at EMSI Marrakech, currently on academic
+            exchange at EPITECH Paris. My path combines software development with communication,
+            event coordination and product thinking.
+          </p>
+
+          <p>
+            I enjoy working where technology meets real human needs — from a tourism platform
+            celebrating Moroccan culture to accessibility-focused hardware and interactive web
+            experiences.
+          </p>
+        </div>
+
+        <!-- Personal facts -->
+        <div class="fact-row">
+          <article class="fact">
+            <div class="fact-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M3 11 16 5 29 11 16 17 3 11Z" />
+                <path d="M8 14v7c5 4 11 4 16 0v-7" />
+                <path d="M27 12v8" />
+              </svg>
+            </div>
+            <strong>18.17</strong>
+            <span>Baccalauréat<br />Très Bien</span>
+          </article>
+
+          <article class="fact">
+            <div class="fact-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <rect x="6" y="5" width="20" height="17" rx="1.5" />
+                <path d="M3 26h26l-2-4H5l-2 4Z" />
+              </svg>
+            </div>
+            <strong>3+</strong>
+            <span>Years of<br />technical studies</span>
+          </article>
+
+          <article class="fact">
+            <div class="fact-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <circle cx="16" cy="16" r="12" />
+                <path
+                  d="M4 16h24 M16 4c4 4 5 8 5 12s-1 8-5 12
+                                            M16 4c-4 4-5 8-5 12s1 8 5 12
+                                            M7 9h18 M7 23h18"
+                />
+              </svg>
+            </div>
+            <strong>3</strong>
+            <span>Languages<br />FR · EN · AR</span>
+          </article>
+
+          <article class="fact">
+            <div class="fact-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M16 16c-4-5-7-8-10-6-5 3-2 12 4 12 3 0 5-3 6-6
+                                            1 3 3 6 6 6 6 0 9-9 4-12-3-2-6 1-10 6Z"
+                />
+              </svg>
+            </div>
+            <strong>∞</strong>
+            <span>Curiosity<br />in progress</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-surface" aria-labelledby="cta-title">
+    <div class="container">
+      <p class="eyebrow">Have an idea, project or opportunity?</p>
       <h2 id="cta-title">Let's build something meaningful.</h2>
-      <a href="contact.html">Get in touch</a>
-    </section>
-  </main>
+      <a class="button button-primary" routerLink="/contact">Get in touch</a>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <p>© 2026 Abir Nassif</p>
-    <nav aria-label="Footer navigation">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </footer>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-progress" aria-hidden="true">
+    <span></span>
+  </div>
 
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-message">
+        <p class="footer-eyebrow">THANK YOU FOR STOPPING BY ✦</p>
 
+        <h2 class="footer-title">
+          Curious by nature.
+          <br />
+          <em>Building what's next.</em>
+        </h2>
+      </div>
+
+      <div class="footer-signature">
+        <div class="footer-monogram" aria-label="Abir Nassif">AN</div>
+        <span>Marrakech · Paris</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span> © <span data-current-year>2026</span> Abir Nassif </span>
+
+      <span class="footer-credit">
+        Designed with intention
+        <span aria-hidden="true">✦</span>
+        Built with code
+      </span>
+
+      <button class="footer-back-top" type="button">
+        Back to top
+        <span class="footer-arrow" aria-hidden="true">↑</span>
+      </button>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER END -->

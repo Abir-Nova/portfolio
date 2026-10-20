@@ -2035,6 +2035,208 @@
 
 
 
+/*How I think*/
+
+:host .approach {
+  padding: 5.8rem 0;
+  border-top: 1px solid #3d29251a;
+}
+
+:host .section-wrap {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+:host .section-heading {
+  margin-bottom: 2.5rem;
+}
+
+:host .section-heading h2{
+  margin: 0;
+  font:
+    500 clamp(2.5rem, 5vw, 4.5rem)/1.02 "Playfair Display",
+    Georgia,
+    serif;
+  letter-spacing: -0.045em;
+}
+
+:host .footer-main .section-index {
+  color: #dba79a;
+}
+
+:host .section-index {
+  margin: 0 0 1.1rem;
+  color: var(--wine);
+  font:
+    0.68rem "DM Mono",
+    monospace;
+  letter-spacing: 0.12em;
+}
+
+:host .approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+:host .approach-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+:host .approach-grid{
+    grid-template-columns: 1fr;
+}
+
+:host .approach-card {
+  min-height: 245px;
+  padding: 1.7rem;
+  background: var(--cream);
+  border: 1px solid #3d292513;
+  border-radius: 8px;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+:host .approach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px #3d292510;
+}
+
+:host .approach-card h3 {
+  margin: 2.5rem 0 0.7rem;
+  font:
+    2rem "Playfair Display",
+    Georgia,
+    serif;
+}
+
+:host .approach-card p {
+  margin: 0;
+  color: var(--about-red)!important;
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+:host .approach-card {
+    min-height: 190px;
+}
+
+:host .card-no {
+  color: var(--rose);
+  font:
+    0.65rem "DM Mono",
+    monospace;
+}
+
+:host h1 em,
+:host h2 em,
+:host .site-footer em {
+  color: var(--about-red)!important;
+  font-weight: 400;
+}
+
+/*FOOTER*/
+
+:host .site-footer {
+  padding: 3.5rem max(24px, calc((100% - 1160px) / 2)) 1.3rem;
+  background: var(--ink);
+  color: var(--cream);
+}
+:host .footer-main {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+:host .footer-main .section-index {
+  color: #dba79a;
+}
+:host .site-footer h2 {
+  margin: 0;
+  font:
+    2.7rem/1.08 "Playfair Display",
+    Georgia,
+    serif;
+}
+:host .site-footer em {
+  color: #e2a99a;
+}
+:host .footer-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 0.78rem;
+  color: #e9dcd3;
+}
+:host .footer-cta span {
+  color: #e2a99a;
+}
+:host .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #fff3;
+  color: #c7b8b0;
+  font:
+    0.65rem "DM Mono",
+    monospace;
+}
+:host .footer-bottom nav {
+  display: flex;
+  gap: 1.2rem;
+}
+:host .footer-bottom a:hover {
+  color: white;
+}
+
+
+@media (max-width: 800px) {
+    :host .approach-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+    
+  :host .section-wrap {
+    width: calc(100% - 32px);
+  }
+
+  :host h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  :host .approach{
+    padding: 4rem 0;
+  }
+
+  :host .approach-grid{
+    grid-template-columns: 1fr;
+  }
+
+  :host .approach-card {
+    min-height: 190px;
+  }
+
+  :host .footer-main {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  :host .site-footer h2 {
+    font-size: 2.3rem;
+  }
+
+  :host .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
 
 
 

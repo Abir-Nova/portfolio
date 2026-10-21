@@ -1,4 +1,5 @@
 .about-page{display:block;} 
+@import './ref_apply.scss';
 /*about section */
 
 
@@ -2113,7 +2114,7 @@
 
 :host .approach-card p {
   margin: 0;
-  color: var(--about-red)!important;
+  color: var(--about-red);
   font-size: 0.82rem;
   line-height: 1.8;
 }

@@ -16,6 +16,7 @@ import { PageEffects } from '../../shared/page-effects';
 })
 export class About implements AfterViewInit, OnDestroy {
   private readonly effects = new PageEffects();
+  readonly currentYear = new Date().getFullYear();
 
   ngAfterViewInit(): void {
     // Run after Angular has placed the page HTML in the DOM.
@@ -32,4 +33,6 @@ export class About implements AfterViewInit, OnDestroy {
     // Disconnect observers and remove listeners when navigating away.
     this.effects.destroy();
   }
+
+  
 }

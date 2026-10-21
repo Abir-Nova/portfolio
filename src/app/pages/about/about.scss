@@ -2248,3 +2248,685 @@
 
 
 
+/* BEYOND THE CODE — SECTION 06  */
+
+section.section.soft-surface[aria-labelledby="beyond-code-title"] {
+    --beyond-ink: #0b1511;
+    --beyond-paper: #f8f4e9;
+    --beyond-green: #0d5c3c;
+    --beyond-red: #b63739;
+    --beyond-gold: #c19344;
+    --beyond-muted: #68736e;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: min(82vh, 760px);
+    padding: clamp(6rem, 11vw, 10rem) 0;
+
+    background:
+        radial-gradient(
+            circle at 12% 25%,
+            rgba(13, 92, 60, .08),
+            transparent 20rem
+        ),
+        radial-gradient(
+            circle at 88% 75%,
+            rgba(182, 55, 57, .07),
+            transparent 23rem
+        ),
+        var(--beyond-paper);
+
+    color: var(--beyond-ink);
+
+    /* ---------------------------------------------------------
+       Background oversized typography
+       --------------------------------------------------------- */
+
+    &::before {
+        content: "BEYOND";
+        position: absolute;
+        z-index: -2;
+
+        top: 50%;
+        left: -0.04em;
+
+        color: rgba(13, 92, 60, .035);
+
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(9rem, 24vw, 25rem);
+        font-weight: 700;
+        line-height: .7;
+        letter-spacing: -.09em;
+        white-space: nowrap;
+
+        transform: translateY(-50%);
+        pointer-events: none;
+
+        animation: beyond-drift 18s ease-in-out infinite alternate;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+
+        opacity: .45;
+        pointer-events: none;
+
+        background-image:
+            radial-gradient(
+                rgba(11, 21, 17, .12) .6px,
+                transparent .6px
+            );
+
+        background-size: 18px 18px;
+
+        mask-image: linear-gradient(
+            90deg,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent
+        );
+    }
+
+
+    /* =========================================================
+       CONTAINER
+       ========================================================= */
+
+    > .container {
+        position: relative;
+        z-index: 2;
+
+        width: min(1160px, calc(100% - 48px));
+        margin-inline: auto;
+
+        display: grid;
+        grid-template-columns: minmax(100px, .3fr) minmax(0, 1.7fr);
+        column-gap: clamp(2rem, 7vw, 7rem);
+        align-items: center;
+    }
+
+
+    /* =========================================================
+       SECTION NUMBER / LABEL
+       ========================================================= */
+
+    > .container > .section-label {
+        position: relative;
+
+        align-self: start;
+        margin-top: .8rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .7rem;
+
+        width: max-content;
+
+        color: var(--beyond-muted);
+
+        font-family: "DM Mono", monospace;
+        text-transform: uppercase;
+    }
+
+    > .container > .section-label::after {
+        content: "";
+        width: 42px;
+        height: 1px;
+        margin-top: .7rem;
+
+        background: var(--beyond-green);
+
+        transform-origin: left;
+        animation: beyond-line-grow 1s cubic-bezier(.2, .8, .2, 1) both;
+    }
+
+    > .container > .section-label span {
+        display: block;
+
+        color: var(--beyond-red);
+
+        font-size: .72rem;
+        font-weight: 500;
+        letter-spacing: .16em;
+
+        transition:
+            color .3s ease,
+            transform .4s cubic-bezier(.2, .8, .2, 1);
+    }
+
+    > .container > .section-label p {
+        margin: 0;
+
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+
+        color: var(--beyond-muted);
+
+        font-size: .62rem;
+        font-weight: 700;
+        letter-spacing: .16em;
+    }
+
+
+    /* =========================================================
+       CONTENT
+       ========================================================= */
+
+    > .container > h2 {
+        position: relative;
+
+        max-width: 900px;
+        margin: 0 0 2rem;
+
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(3.4rem, 7.2vw, 7.8rem);
+        font-weight: 500;
+        line-height: .91;
+        letter-spacing: -.065em;
+
+        text-wrap: balance;
+
+        animation:
+            beyond-heading-in 1s cubic-bezier(.16, 1, .3, 1) both;
+
+        /* Editorial underline */
+        &::after {
+            content: "";
+            position: absolute;
+
+            left: .03em;
+            bottom: -.14em;
+
+            width: clamp(110px, 18vw, 230px);
+            height: 5px;
+
+            border-radius: 100%;
+
+            background: var(--beyond-red);
+
+            transform: rotate(-2deg) scaleX(0);
+            transform-origin: left;
+
+            animation:
+                beyond-underline 1s .55s cubic-bezier(.2, .8, .2, 1) forwards;
+        }
+    }
+
+
+    /* =========================================================
+       LEAD COPY
+       ========================================================= */
+
+    > .container > .lead {
+        position: relative;
+
+        max-width: 650px;
+        margin: 0 0 2.4rem;
+
+        color: var(--beyond-muted);
+
+        font-size: clamp(.9rem, 1.25vw, 1.05rem);
+        line-height: 1.9;
+
+        animation:
+            beyond-copy-in .9s .25s cubic-bezier(.16, 1, .3, 1) both;
+
+        &::before {
+            content: "01 / 04";
+
+            position: absolute;
+            left: -4.8rem;
+            top: .35rem;
+
+            color: rgba(13, 92, 60, .5);
+
+            font-family: "DM Mono", monospace;
+            font-size: .56rem;
+            letter-spacing: .12em;
+
+            transform: rotate(-90deg);
+
+            @media (max-width: 900px) {
+                display: none;
+            }
+        }
+    }
+
+
+    /* =========================================================
+       CTA — CREATIVE MAGNETIC-STYLE BUTTON
+       ========================================================= */
+
+    > .container > .button-primary {
+        position: relative;
+        isolation: isolate;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: fit-content;
+        min-height: 50px;
+        padding: .8rem 1.35rem;
+
+        overflow: hidden;
+
+        border: 1px solid var(--beyond-ink);
+        border-radius: 999px;
+
+        background: var(--beyond-ink);
+        color: var(--beyond-paper);
+
+        font-family: "DM Mono", monospace;
+        font-size: .68rem;
+        font-weight: 600;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+
+        transform-origin: left;
+
+        animation:
+            beyond-button-in .8s .5s cubic-bezier(.16, 1, .3, 1) both;
+
+        transition:
+            color .35s ease,
+            transform .35s cubic-bezier(.2, .8, .2, 1),
+            box-shadow .35s ease;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            z-index: -1;
+
+            width: 0;
+            height: 0;
+
+            left: var(--mouse-x, 50%);
+            top: var(--mouse-y, 50%);
+
+            border-radius: 50%;
+
+            background: var(--beyond-red);
+
+            transform: translate(-50%, -50%);
+
+            transition:
+                width .55s cubic-bezier(.2, .8, .2, 1),
+                height .55s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        &:hover {
+            color: var(--beyond-paper);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(11, 21, 17, .16);
+
+            &::before {
+                width: 350px;
+                height: 350px;
+            }
+        }
+
+        &:active {
+            transform: translateY(-1px) scale(.98);
+        }
+    }
+
+
+    /* =========================================================
+       DECORATIVE ORBIT
+       ========================================================= */
+
+    > .container::before {
+        content: "";
+
+        position: absolute;
+        z-index: -1;
+
+        right: -5%;
+        top: 50%;
+
+        width: clamp(220px, 28vw, 420px);
+        aspect-ratio: 1;
+
+        border: 1px solid rgba(13, 92, 60, .18);
+        border-radius: 50%;
+
+        transform: translateY(-50%) rotate(-18deg);
+
+        animation:
+            beyond-orbit-in 1.4s .15s cubic-bezier(.16, 1, .3, 1) both,
+            beyond-orbit-spin 28s 1.5s linear infinite;
+    }
+
+    > .container::after {
+        content: "✦";
+
+        position: absolute;
+        z-index: 3;
+
+        right: 5%;
+        top: 20%;
+
+        display: grid;
+        place-items: center;
+
+        width: 38px;
+        height: 38px;
+
+        color: var(--beyond-gold);
+
+        font-size: 1.25rem;
+
+        animation:
+            beyond-star-in .8s .8s both,
+            beyond-star-float 4s 1.6s ease-in-out infinite;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE — TABLET
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+        min-height: auto;
+        padding: 6rem 0;
+
+        > .container {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        > .container > .section-label {
+            flex-direction: row;
+            align-items: center;
+            gap: .8rem;
+
+            margin-bottom: 1.8rem;
+        }
+
+        > .container > .section-label p {
+            writing-mode: initial;
+            transform: none;
+        }
+
+        > .container > .section-label::after {
+            width: 30px;
+            margin-top: 0;
+        }
+
+        > .container > h2 {
+            max-width: 700px;
+            font-size: clamp(3.2rem, 9vw, 6rem);
+        }
+
+        > .container::before {
+            right: -12%;
+            top: 55%;
+
+            width: 330px;
+        }
+
+        > .container::after {
+            right: 8%;
+            top: 15%;
+        }
+    }
+
+
+    /* =========================================================
+       RESPONSIVE — MOBILE
+       ========================================================= */
+
+    @media (max-width: 600px) {
+
+        padding: 5rem 0 5.5rem;
+
+        > .container {
+            width: calc(100% - 32px);
+        }
+
+        &::before {
+            content: "BEYOND";
+
+            top: 31%;
+            left: -4%;
+
+            font-size: 38vw;
+
+            opacity: .7;
+        }
+
+        > .container > .section-label {
+            margin-bottom: 1.4rem;
+
+            font-size: .58rem;
+        }
+
+        > .container > .section-label span {
+            font-size: .62rem;
+        }
+
+        > .container > h2 {
+            margin-bottom: 1.8rem;
+
+            font-size: clamp(3rem, 15vw, 5rem);
+            line-height: .94;
+            letter-spacing: -.065em;
+        }
+
+        > .container > h2::after {
+            height: 3px;
+            bottom: -.11em;
+        }
+
+        > .container > .lead {
+            max-width: 100%;
+            margin-bottom: 2rem;
+
+            font-size: .84rem;
+            line-height: 1.85;
+        }
+
+        > .container > .button-primary {
+            min-height: 46px;
+            padding: .7rem 1.1rem;
+
+            font-size: .6rem;
+        }
+
+        > .container::before {
+            right: -32%;
+            top: 68%;
+
+            width: 270px;
+
+            opacity: .75;
+        }
+
+        > .container::after {
+            right: 5%;
+            top: 8%;
+
+            font-size: 1rem;
+        }
+    }
+
+
+    /* =========================================================
+       VERY SMALL PHONES
+       ========================================================= */
+
+    @media (max-width: 380px) {
+
+        padding: 4rem 0 4.5rem;
+
+        > .container {
+            width: calc(100% - 24px);
+        }
+
+        > .container > h2 {
+            font-size: 2.8rem;
+        }
+
+        > .container > .lead {
+            font-size: .8rem;
+        }
+
+        > .container::before {
+            right: -40%;
+            width: 230px;
+        }
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+       ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        &,
+        & *,
+        & *::before,
+        & *::after {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        > .container > h2::after {
+            transform: rotate(-2deg) scaleX(1);
+        }
+
+        > .container > .button-primary::before {
+            display: none;
+        }
+    }
+}
+
+
+/* ============================================================
+   BEYOND CODE KEYFRAMES
+   All names are uniquely prefixed to avoid collisions.
+   ============================================================ */
+
+@keyframes beyond-drift {
+    from {
+        transform: translate(-2%, -50%) rotate(-1deg);
+    }
+
+    to {
+        transform: translate(2%, -50%) rotate(1deg);
+    }
+}
+
+@keyframes beyond-line-grow {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes beyond-heading-in {
+    from {
+        opacity: 0;
+        transform: translateY(55px);
+        clip-path: inset(100% 0 0 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes beyond-underline {
+    from {
+        transform: rotate(-2deg) scaleX(0);
+    }
+
+    to {
+        transform: rotate(-2deg) scaleX(1);
+    }
+}
+
+@keyframes beyond-copy-in {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes beyond-button-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes beyond-orbit-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(.65) rotate(-45deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1) rotate(-18deg);
+    }
+}
+
+@keyframes beyond-orbit-spin {
+    to {
+        transform: translateY(-50%) rotate(342deg);
+    }
+}
+
+@keyframes beyond-star-in {
+    from {
+        opacity: 0;
+        transform: scale(0) rotate(-90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes beyond-star-float {
+    0%,
+    100% {
+        translate: 0 0;
+        rotate: 0deg;
+    }
+
+    50% {
+        translate: 0 -9px;
+        rotate: 12deg;
+    }
+}

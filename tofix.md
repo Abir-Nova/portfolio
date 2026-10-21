@@ -1,7 +1,10 @@
-about page fix the design  :  : 
-    How I think
-    beyond the code 
-    Footer
+I'll fix this myself : step by step
+
+about page fix the design :
+    How I think *
+    beyond the code *
+    Footer *
+    merge scss *
 
 experience page  fix the design  : 
     the experiences 

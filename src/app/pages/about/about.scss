@@ -1,5 +1,21 @@
+/* ============================================================
+   ABOUT PAGE — single stylesheet.
+   The former ref_apply.scss was merged in here; no separate
+   About stylesheet is used any more.
+   ============================================================ */
+
+/* Host palette tokens — inherited by every About section */
+:host.about-page {
+    --about-ink: #101914;
+    --about-paper: #f8f4e9;
+    --about-cream: #f4efe3;
+    --about-green: #0d5c3c;
+    --about-red: #b63739;
+    --about-muted: #68736e;
+}
+
 .about-page{display:block;} 
-@import './ref_apply.scss';
+
 /*about section */
 
 
@@ -2061,10 +2077,6 @@
   letter-spacing: -0.045em;
 }
 
-:host .footer-main .section-index {
-  color: #dba79a;
-}
-
 :host .section-index {
   margin: 0 0 1.1rem;
   color: var(--wine);
@@ -2074,22 +2086,16 @@
   letter-spacing: 0.12em;
 }
 
+/* The 3-column grid is locked with !important (kept from ref_apply.scss),
+   so the two later overrides (2 columns / 1 column) could never apply. */
 :host .approach-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 1rem;
 }
 
-:host .approach-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-:host .approach-grid{
-    grid-template-columns: 1fr;
-}
-
 :host .approach-card {
-  min-height: 245px;
+  min-height: 190px;
   padding: 1.7rem;
   background: var(--cream);
   border: 1px solid #3d292513;
@@ -2112,19 +2118,20 @@
     serif;
 }
 
+/* !important kept from ref_apply.scss — it wins over the plain
+   `color: var(--about-red)` declaration it replaces. */
 :host .approach-card p {
   margin: 0;
-  color: var(--about-red);
+  color: var(--about-ink) !important;
   font-size: 0.82rem;
   line-height: 1.8;
 }
 
-:host .approach-card {
-    min-height: 190px;
-}
-
+/* ref_apply.scss carried `.approach-card span { color: var(--about-red) }`,
+   which outranked `:host .card-no` on specificity and made the number red.
+   The value is kept here so the card number keeps rendering red. */
 :host .card-no {
-  color: var(--rose);
+  color: var(--about-red);
   font:
     0.65rem "DM Mono",
     monospace;

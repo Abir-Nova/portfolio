@@ -2180,6 +2180,7 @@
 }
 :host .footer-cta span {
   color: #e2a99a;
+  transform: translate(3px, -3px) !important ;
 }
 :host .footer-bottom {
   display: flex;
@@ -2929,4 +2930,21 @@ section.section.soft-surface[aria-labelledby="beyond-code-title"] {
         translate: 0 -9px;
         rotate: 12deg;
     }
+}
+
+
+/* arrow ↗ */
+.external-arrow {
+  display: inline-block;
+  color: inherit;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  font-variant-emoji: text;
+  transition: transform 0.25s ease;
+}
+
+.external-arrow:hover {
+  transform: translate(2px, -2px);
 }

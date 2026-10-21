@@ -6,7 +6,15 @@
       <span class="brand-mark">AN</span>
       <span>ABIR NASSIF</span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span></button>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="nav-links"
+      aria-label="Open navigation"
+    >
+      <span></span><span></span>
+    </button>
     <div class="nav-links" id="nav-links">
       <a routerLink="/about">About</a>
       <a routerLink="/experience">Experience</a>
@@ -19,7 +27,7 @@
 <main id="main-content">
   <!-- Experience -->
 
-  <section class="stage" aria-labelledby="exp-title" style="margin-top: 76px;">
+  <section class="stage" aria-labelledby="exp-title" style="margin-top: 76px">
     <!--  Decorative background  -->
     <div class="deco" aria-hidden="true">
       <span class="line-arc-left"></span>
@@ -84,12 +92,12 @@
         <p class="date">2026 –<br />PRESENT</p>
         <span class="dot" aria-hidden="true"></span>
         <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48">
-              <path
-                d="M24 44V22M24 22c-3-6-9-9-16-8 5 1 8 4 9 7M24 22c3-6 9-9 16-8-5 1-8 4-9 7M24 22c-2-5-7-9-13-15 6 1 11 5 13 10M24 22c2-5 7-9 13-15-6 1-11 5-13 10M24 22c-5-1-11 2-14 8M24 22c5-1 11 2 14 8"
-              />
-            </svg>
+          <div class="icon">
+            <img
+              src="assets/marocsphereLogo.png"
+              alt="MarocSphere logo"
+              class="organization-logo"
+            />
           </div>
           <div class="card-body">
             <p class="eyebrow">CO-FOUNDER · FRONTEND · COMMUNICATION</p>
@@ -112,14 +120,10 @@
         <p class="date">2026 –<br />PRESENT</p>
         <span class="dot" aria-hidden="true"></span>
         <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" class="filled">
-              <path
-                d="M24 3l5 7 8-2 1 8 7 4-4 7 4 7-7 3-1 8-8-2-5 7-5-7-8 2-1-8-7-3 4-7-4-7 7-4 1-8 8 2z"
-              />
-              <path class="cut" d="M24 15l9 9-9 9-9-9z" />
-            </svg>
+          <div class="icon">
+            <img src="assets/OMBLogo.png" alt="OMB logo" class="organization-logo" />
           </div>
+
           <div class="card-body">
             <p class="eyebrow">PROGRAM / FORUM MANAGER</p>
             <h3>OMB · Marrakech</h3>
@@ -140,13 +144,8 @@
         <p class="date">2023 –<br />2024</p>
         <span class="dot" aria-hidden="true"></span>
         <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" class="filled">
-              <path
-                d="M24 42S4 30 4 16C4 9 9 5 14.5 5 19 5 22 8 24 11c2-3 5-6 9.5-6C39 5 44 9 44 16c0 14-20 26-20 26z"
-              />
-              <path class="pulse" d="M8 24h9l3-6 5 12 3-6h12" />
-            </svg>
+          <div class="icon">
+            <img src="assets/CHULogo.jpg" alt="CHU logo" class="organization-logo" />
           </div>
           <div class="card-body">
             <p class="eyebrow">INTERNSHIP · HOSPITAL EMERGENCY SERVICE</p>
@@ -165,30 +164,24 @@
       </li>
     </ol>
   </section>
-
-  <section class="section" aria-labelledby="experience-cta-title">
-    <div class="container">
-      <h2 id="experience-cta-title">Let's create the next chapter.</h2>
-      <a class="button button-primary" routerLink="/contact">Contact me →</a>
-    </div>
-  </section>
 </main>
 
-<footer class="footer">
-  <div class="container footer-main">
+<footer class="site-footer">
+  <div class="footer-main">
     <div>
-      <p class="eyebrow">Thank you for stopping by ✦</p>
-      <h2 class="footer-title">Curious by nature. <em>Building what's next.</em></h2>
+      <p class="section-index">THANK YOU FOR STOPPING BY ✦</p>
+      <h2>Curious by nature.<br /><em>Building what's next.</em></h2>
     </div>
-    <span>Marrakech · Paris</span>
+    <a class="footer-cta" routerLink="/contact"
+      >Let's create the next chapter <span>Contact me ↗</span></a
+    >
   </div>
-  <div class="container footer-bottom">
-    <p>© 2026 Abir Nassif</p>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a routerLink="/">Home</a>
-      <a routerLink="/about">About</a>
-      <a routerLink="/projects">Projects</a>
-      <a routerLink="/contact">Contact</a>
+  <div class="footer-bottom">
+    <span>© {{ currentYear }} Abir Nassif</span>
+    <nav aria-label="Footer navigation">
+      <a routerLink="/">Home</a><a routerLink="/experience">Experience</a
+      ><a routerLink="/projects">Projects</a><a routerLink="/contact">Contact</a>
     </nav>
+    <a href="#top">Back to top ↑</a>
   </div>
 </footer>

@@ -1,4 +1,3 @@
-I'll fix this myself : step by step
 
 about page fix the design :
     How I think *
@@ -7,9 +6,9 @@ about page fix the design :
     merge scss *
 
 experience page  fix the design  : 
-    the experiences 
-    CTA 
-    Footer
+    the experiences icons + green color 
+    CTA *
+    Footer *
 
 projects page : 
     I can see nothing  fix it 

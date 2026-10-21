@@ -13,6 +13,7 @@ import { PageEffects } from '../../shared/page-effects';
 })
 export class Experience implements AfterViewInit, OnDestroy {
   private readonly effects = new PageEffects();
+  readonly currentYear = new Date().getFullYear();
 
   ngAfterViewInit(): void {
     this.effects.init({ reveal: true, footer: true });

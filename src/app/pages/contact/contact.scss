@@ -108,14 +108,15 @@
 /* Small decorative marker */
 .contact-copy::before {
   content: 'AVAILABLE FOR MEANINGFUL PROJECTS';
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.65rem;
-  margin-bottom: 1.5rem;
+  gap: 0.55rem;
+  margin-bottom: 1.3rem;
+  margin-left: 1rem;
   color: var(--green);
-  font:
-    0.58rem 'DM Mono',
-    monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  font: 'DM Mono', monospace;
   letter-spacing: 0.08em;
 }
 
@@ -124,8 +125,8 @@
   position: absolute;
   top: 0.12rem;
   left: 0;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   transform: translateY(0.24rem);
   border-radius: 50%;
   background: var(--green);

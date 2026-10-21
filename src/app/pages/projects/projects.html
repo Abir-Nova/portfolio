@@ -230,31 +230,25 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="experience-cta-title">
-    <div class="container">
-      <h2 id="experience-cta-title">Let's create the next chapter.</h2>
-      <a class="button button-primary" routerLink="/contact">Contact me →</a>
-    </div>
-  </section>
-
   <!--projetcs end  -->
 </main>
 
-<footer class="footer">
-  <div class="container footer-main">
+<footer class="site-footer">
+  <div class="footer-main">
     <div>
-      <p class="eyebrow">Thank you for stopping by ✦</p>
-      <h2 class="footer-title">Curious by nature. <em>Building what's next.</em></h2>
+      <p class="section-index">THANK YOU FOR STOPPING BY ✦</p>
+      <h2>Curious by nature.<br /><em>Building what's next.</em></h2>
     </div>
-    <span>Marrakech · Paris</span>
+    <a class="footer-cta" routerLink="/contact"
+      >Let's create the next chapter <span>Contact me ↗</span></a
+    >
   </div>
-  <div class="container footer-bottom">
-    <p>© 2026 Abir Nassif</p>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a routerLink="/">Home</a>
-      <a routerLink="/about">About</a>
-      <a routerLink="/experience">Experience</a>
-      <a routerLink="/contact">Contact</a>
+  <div class="footer-bottom">
+    <span>© {{ currentYear }} Abir Nassif</span>
+    <nav aria-label="Footer navigation">
+      <a routerLink="/">Home</a><a routerLink="/experience">Experience</a
+      ><a routerLink="/projects">Projects</a><a routerLink="/contact">Contact</a>
     </nav>
+    <a href="#top">Back to top ↑</a>
   </div>
 </footer>

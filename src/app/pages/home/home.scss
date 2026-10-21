@@ -861,6 +861,12 @@ h2 em {
   text-transform: uppercase;
 }
 
+/* Keep the first statistic aligned with the others */
+.about .fact--events span:not(.tag-dot) {
+  max-width: 180px;
+  min-height: 2.375rem;
+}
+
 /* entrance animations*/
 
 @keyframes portrait-enter {

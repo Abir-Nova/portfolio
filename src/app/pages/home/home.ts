@@ -1,11 +1,4 @@
-
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnDestroy,
-  ViewChild
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { PageEffects } from '../../shared/page-effects';
@@ -20,7 +13,7 @@ import { PageEffects } from '../../shared/page-effects';
   selector: 'app-home',
   styleUrl: './home.scss',
   templateUrl: './home.html',
-  host: { class: 'home-page' }
+  host: { class: 'home-page' },
 })
 export class Home implements AfterViewInit, OnDestroy {
   @ViewChild('closingSection')
@@ -34,7 +27,7 @@ export class Home implements AfterViewInit, OnDestroy {
     // Keep the existing shared reveal and footer effects.
     this.effects.init({
       reveal: true,
-      footer: true
+      footer: true,
     });
 
     // Add the entrance animation for the new CTA section.
@@ -73,17 +66,15 @@ export class Home implements AfterViewInit, OnDestroy {
       },
       {
         threshold: 0.15,
-        rootMargin: '0px 0px -35px 0px'
-      }
+        rootMargin: '0px 0px -35px 0px',
+      },
     );
 
     this.closingObserver.observe(section);
   }
 
   private updateFooterYear(): void {
-    const yearElement = document.querySelector<HTMLElement>(
-      '[data-current-year]'
-    );
+    const yearElement = document.querySelector<HTMLElement>('[data-current-year]');
 
     if (yearElement) {
       yearElement.textContent = String(new Date().getFullYear());
@@ -91,9 +82,7 @@ export class Home implements AfterViewInit, OnDestroy {
   }
 
   private initBackToTop(): void {
-    const button = document.querySelector<HTMLButtonElement>(
-      '.footer-back-top'
-    );
+    const button = document.querySelector<HTMLButtonElement>('.footer-back-top');
 
     if (!button) {
       return;
@@ -105,9 +94,7 @@ export class Home implements AfterViewInit, OnDestroy {
   private readonly scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-        ? 'auto'
-        : 'smooth'
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
     });
   };
 
@@ -116,9 +103,7 @@ export class Home implements AfterViewInit, OnDestroy {
     this.closingObserver?.disconnect();
 
     // Remove the footer button listener to avoid memory leaks.
-    const button = document.querySelector<HTMLButtonElement>(
-      '.footer-back-top'
-    );
+    const button = document.querySelector<HTMLButtonElement>('.footer-back-top');
 
     button?.removeEventListener('click', this.scrollToTop);
 

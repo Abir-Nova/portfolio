@@ -9,7 +9,7 @@ import { PageEffects } from '../../shared/page-effects';
   selector: 'app-experience',
   styleUrl: './experience.scss',
   templateUrl: './experience.html',
-  host: { class: 'experience-page' }
+  host: { class: 'experience-page' },
 })
 export class Experience implements AfterViewInit, OnDestroy {
   private readonly effects = new PageEffects();

@@ -1,9 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnDestroy,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -26,8 +21,7 @@ export class Projects implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     // Select the heading and project cards using their existing CSS class.
-    const revealElements =
-      this.host.nativeElement.querySelectorAll<HTMLElement>('.reveal');
+    const revealElements = this.host.nativeElement.querySelectorAll<HTMLElement>('.reveal');
 
     // Fallback: show all content if IntersectionObserver isn't supported.
     if (typeof IntersectionObserver === 'undefined') {
@@ -52,7 +46,7 @@ export class Projects implements AfterViewInit, OnDestroy {
       },
       {
         threshold: 0.1,
-      }
+      },
     );
 
     // Start observing every element marked with .reveal.

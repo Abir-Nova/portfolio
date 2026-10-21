@@ -369,7 +369,6 @@
   padding: calc(22 * var(--u)) calc(30 * var(--u)) 0 calc(143 * var(--u));
 }
 
-
 /* Organization logo badge */
 .stage .icon {
   position: absolute;
@@ -385,9 +384,7 @@
   border-radius: 50%;
   background: var(--sage);
 
-  box-shadow:
-    inset 0 0 0 calc(3 * var(--u))
-    rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 0 calc(3 * var(--u)) rgba(255, 255, 255, 0.4);
 
   overflow: hidden;
 }
@@ -412,7 +409,6 @@
   width: 78%;
   height: 78%;
 }
-
 
 .eyebrow {
   font-family: var(--mono);
@@ -459,8 +455,6 @@
   color: var(--ink);
 }
 
-
-
 /*FOOTER*/
 
 :host .site-footer {
@@ -481,7 +475,7 @@
 :host .site-footer h2 {
   margin: 0;
   font:
-    2.7rem/1.08 "Playfair Display",
+    2.7rem/1.08 'Playfair Display',
     Georgia,
     serif;
 }
@@ -509,7 +503,7 @@
   border-top: 1px solid #fff3;
   color: #c7b8b0;
   font:
-    0.65rem "DM Mono",
+    0.65rem 'DM Mono',
     monospace;
 }
 :host .footer-bottom nav {
@@ -520,15 +514,13 @@
   color: white;
 }
 
-
 @media (max-width: 800px) {
-    :host .approach-grid{
+  :host .approach-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 600px) {
-    
   :host .section-wrap {
     width: calc(100% - 32px);
   }
@@ -537,11 +529,11 @@
     font-size: clamp(3rem, 15vw, 4.5rem);
   }
 
-  :host .approach{
+  :host .approach {
     padding: 4rem 0;
   }
 
-  :host .approach-grid{
+  :host .approach-grid {
     grid-template-columns: 1fr;
   }
 

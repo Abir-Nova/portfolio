@@ -6,7 +6,7 @@ about page fix the design :
     merge scss *
 
 experience page  fix the design  : 
-    the experiences icons + green color 
+    the experiences logos *
     CTA *
     Footer *
 
@@ -16,4 +16,4 @@ projects page :
     Footer
 
 Let's talk page : 
-    fooyter's nav
+    footer *
